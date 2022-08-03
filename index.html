@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1 class="titulo">Pokemon Game</h1>
+    <div class="contenedor-juego">
+        <section id="pokemon" class="pokemon">
+            <h2>Elige tu pokemon: 🔥 💧 🌿</h2>
+            
+            <div class="container-pokemon-item">
+                <img src="squirtle.png" height="50px" alt="">
+                <input type="checkbox" id="Squirtle" name="pokemon" value="Squirtle">
+                <label for="Squirtle">Squirtle Tipo AGUA</label> 
+            </div>
+            <hr>
+            <div class="container-pokemon-item">
+                <img src="charmander.png" height="50px" alt="">
+                <input type="checkbox" id="Charmander" name="pokemon" value="Charmander">
+                <label for="Charmander">Charmander Tipo FUEGO</label> 
+            </div>
+            <hr>
+            <div class="container-pokemon-item">
+                <img src="bulbasaur.png" height="50px" alt="">
+                <input type="checkbox" id="Bulbasaur" name="pokemon" value="Bulbasaur">
+                <label for="Bulbasaur">Bulbasaur Tipo PLANTA</label> 
+            </div>
+            
+            <button class="button-select" onclick="seleccionPokemon()">Seleccionar</button>
+        </section>
+
+        <section id="pokemontexto" class="pokemon hide">
+            <h2>Elige tu pokemon: 🔥 💧 🌿</h2>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero, aliquam voluptas? Rerum asperiores nam perferendis doloremque magnam. Eaque laborum officiis laboriosam in tenetur fugiat ea architecto nesciunt, quasi nam optio!Lorem
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid temporibus ipsum, sit perspiciatis quo et sint. Ipsum vero, doloremque deleniti fugit eum blanditiis commodi dignissimos tenetur a, voluptatem magnam asperiores?
+            </p>
+            
+            <button class="button-select">Seleccionar</button>
+        </section>
+
+        <section id="combate" class="combate">
+            <h2>Elige tu ataque:</h2>
+            <div class="estado-pelea">
+                <p>Tu pokemon tiene <span id="vida">10</span> vidas </p>
+                <p>El pokemon enemigo tiene <span id="vida-enemiga">10</span> vidas </p>
+            </div>
+            
+            <div class="container-ataques">
+                <button class="container-ataque-item">Fuego 🔥</button>
+                <button class="container-ataque-item">Agua 💧</button>
+                <button class="container-ataque-item">Planta 🌿 </button>
+            </div>
+            
+            <section id="mensajes" class="mensajes" >
+                <h3>Tu pokemón atacó con FUEGO, el enemigo atacó con AGUA</h3>
+            </section>
+    
+            <section id="reiniciar">
+                <button class="button-reiniciar">Reiniciar</button>
+            </section>
+        </section>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
