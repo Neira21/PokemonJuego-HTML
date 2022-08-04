@@ -135,6 +135,13 @@ body{
     font-size: 18px;
     margin: 30px 10px;
 }
+
+.mensajes h3{
+    background-color: white;
+    padding: 10px;
+    opacity: 0.5;
+}
+
 .button-reiniciar{
     background: #8675e8;
     color: #fff;
