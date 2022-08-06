@@ -9,64 +9,67 @@
 </head>
 <body>
     <h1 class="titulo">Pokemon Game</h1>
-    <div class="contenedor-juego">
-        <section id="pokemon" class="pokemon">
-            <h2>Elige tu pokemon: 🔥 💧 🌿</h2>
-            
-            <div class="container-pokemon-item">
-                <img src="squirtle.png" height="50px" alt="">
-                <input type="radio" id="Squirtle" name="pokemon" value="Squirtle">
-                <label for="Squirtle">Squirtle Tipo AGUA</label> 
+    <section id="pokemon" class="pokemon">
+        <h2>Elige tu pokemon: 🔥 💧 🌿</h2>
+            <div id="contenedor-tarjetas-pokemon" class="contenedor-tarjetas-pokemon">
             </div>
-            <hr>
-            <div class="container-pokemon-item">
-                <img src="charmander.png" height="50px" alt="">
-                <input type="radio" id="Charmander" name="pokemon" value="Charmander">
-                <label for="Charmander">Charmander Tipo FUEGO</label> 
+            <div class="contenedor-boton">
+                <button id="boton-seleccionar-pokemon" class="button-select">Seleccionar</button>
             </div>
-            <hr>
-            <div class="container-pokemon-item">
-                <img src="bulbasaur.png" height="50px" alt="">
-                <input type="radio" id="Bulbasaur" name="pokemon" value="Bulbasaur">
-                <label for="Bulbasaur">Bulbasaur Tipo PLANTA</label> 
-            </div>
-            
-            <button id="boton-seleccionar-pokemon" class="button-select">Seleccionar</button>
-        </section>
-
-        <section id="pokemontexto" class="pokemon hide">
-            <h2>Elige tu pokemon: 🔥 💧 🌿</h2>
-            <h1>
-                SIMULACCIÓN DE JUEGO
-                SIMULACCIÓN DE BATALLA
-            </h1>
-            
-        </section>
-
-        <section id="combate" class="combate hide">
-            <h2>Elige tu ataque:</h2>
-            <div class="estado-pelea">
-                <p>Tu pokemon <span id="pokemonNamePlayer"></span> tiene <span id="vidaJugador">10</span> vidas </p>
-                <p>El pokemon <span id="pokemonNameEnemy"></span> enemigo tiene <span id="vidaEnemigo">10</span> vidas </p>
-            </div>
-            
-            <div class="container-ataques">
-                <button id="boton-fuego"  class="container-ataque-item">Fuego 🔥</button>
-                <button id="boton-agua" class="container-ataque-item">Agua 💧</button>
-                <button id="boton-planta" class="container-ataque-item">Planta 🌿 </button>
-            </div>
-            
-            <section id="mensajes" class="mensajes" >
-                <h3>Tu pokemón atacó con <span id="ataqueJugadorMensaje"></span>, el enemigo atacó con <span id="ataqueEnemigoMensaje"></span></h3>
-                <br>
-                <h3 id="resultadoPelea"></h3>
-            </section>
+    </section>
     
-            <section id="reiniciar">
-                <button id="boton-reiniciar" class="button-reiniciar" onclick="reiniciar()">Reiniciar</button>
+
+    <div id="contenedor-juego" class="contenedor-juego">
+        <section id="combate" class="combate">
+            <section>
+                <h2>Elige tu ataque:</h2>
+                <section id="reiniciar">
+                    <button id="boton-reiniciar" class="button-reiniciar" onclick="reiniciar()">Reiniciar</button>
+                </section>
+                <div id="contenedor-ataques" class="container-ataques">
+                </div>
+                <div class="estado-pelea">
+                    <div class="nombresPokemon">
+                        <h3 id="pokemonNamePlayer"></h3>
+                        <h3>vs</h3>
+                        <h3 id="pokemonNameEnemy"></h3>
+                    </div>
+                    <div class="vidasPokemon">
+                        <h3 id="victorias"></h3>
+                        <h3 id="empates"></h3>
+                        <h3 id="derrotas"></h3>
+                    </div>
+                    
+                </div>
+            </section>
+        </section>
+
+        <section id="mensajes" class="mensajes" >                
+            <h2>órdenes:</h2>
+            <section id="contenedor-mensajes" class="contenedor-mensajes">
+                
+            </section>
+            <section id="contenedor-mensaje-ataque" >
+
+            </section>
+            <section id="contenedor-mensaje-final">
+
             </section>
         </section>
     </div>
+
+    <section id="ver-mapa">
+        <h2>Recorre el mapa con tu pokemón</h2>
+        <canvas id="mapa"></canvas>
+        <button onmouseup="detenerMovimiento()" onmousedown="moverArriba()">Arriba</button>
+        <div class="organizarbotones">
+            <button onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()">Izquierda</button>
+            <button onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">Abajo</button>
+            <button onmouseup="detenerMovimiento()" onmousedown="moverDereha()">Derecha</button>
+        </div>
+        
+        
+    </section>
 
     <script src="javascript.js"></script>
 </body>
