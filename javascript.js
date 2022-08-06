@@ -60,7 +60,7 @@ let lienzo = mapa.getContext("2d");
 
 let intervalo;
 let mapaBackground = new Image();
-mapaBackground.src = "./fondo.png";
+mapaBackground.src = "./img/fondo.png";
 
 //Clases y Objetos de los pokemons
 class Pokemon{
@@ -91,14 +91,14 @@ class Pokemon{
 
 }
 
-let Charmander = new Pokemon("Charmander", "Charmander.png", 5, 'CharmanderMapa.png');
-let Squirtle = new Pokemon("Squirtle", "Squirtle.png", 5, 'SquirtleMapa.png');
-let Bulbasaur = new Pokemon("Bulbasaur", "Bulbasaur.png", 5, 'BulbasaurMapa.png');
+let Charmander = new Pokemon("Charmander", "./img/Charmander.png", 5, './img/CharmanderMapa.png');
+let Squirtle = new Pokemon("Squirtle", "./img/Squirtle.png", 5, './img/SquirtleMapa.png');
+let Bulbasaur = new Pokemon("Bulbasaur", "./img/Bulbasaur.png", 5, './img/BulbasaurMapa.png');
 
 
-let CharmanderEnemigo = new Pokemon("Charmander", "Charmander.png", 5, 'CharmanderMapa.png', 600,120);
-let SquirtleEnemigo = new Pokemon("Squirtle", "Squirtle.png", 5, 'SquirtleMapa.png', 150, 370);
-let BulbasaurEnemigo = new Pokemon("Bulbasaur", "Bulbasaur.png", 5, 'BulbasaurMapa.png', 400, 280);
+let CharmanderEnemigo = new Pokemon("Charmander", "./img/Charmander.png", 5, './img/CharmanderMapa.png', 600,120);
+let SquirtleEnemigo = new Pokemon("Squirtle", "./img/Squirtle.png", 5, './img/SquirtleMapa.png', 150, 370);
+let BulbasaurEnemigo = new Pokemon("Bulbasaur", "./img/Bulbasaur.png", 5, './img/BulbasaurMapa.png', 400, 280);
 
 Bulbasaur.ataques.push(
     {nombre: "🌿", id: "boton-planta",},
